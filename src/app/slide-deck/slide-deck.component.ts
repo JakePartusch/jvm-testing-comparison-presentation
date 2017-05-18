@@ -23,7 +23,8 @@ export class SlideDeckComponent implements OnInit {
       'reveal.js/lib/js/head.min.js',
       'reveal.js/lib/js/html5shiv.js',
       'highlight.js',
-      'highlight.js/lib/languages/groovy.js'
+      'highlight.js/lib/languages/groovy.js',
+      'highlight.js/lib/languages/kotlin.js'
     ], () => {
       const Reveal = require('reveal.js');
       require('reveal.js/lib/js/classList.js');
@@ -32,6 +33,7 @@ export class SlideDeckComponent implements OnInit {
 
       const hljs = require('highlight.js');
       require('highlight.js/lib/languages/groovy.js')(hljs);
+      require('highlight.js/lib/languages/kotlin.js')(hljs);
 
       (window as any).Reveal = Reveal;
 
